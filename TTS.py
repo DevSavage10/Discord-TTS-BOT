@@ -1,8 +1,6 @@
 import discord
 from discord.ext import commands
-import os
-import json
-import asyncio
+import os, json, asyncio
 from queue import Queue
 from gtts import gTTS
 
@@ -14,14 +12,14 @@ intents.members = True
 intents.typing = False
 intents.message_content = True
 intents.presences = False
-
 bot = commands.Bot(command_prefix='.', intents=intents)
-
 channel_settings = {}
 voice_clients = {}
-
 SETTINGS_FILE = "settings.json"
 
+# ------------------------- #
+#        설정 데이터
+# ------------------------- #
 def load_settings():
     try:
         with open(SETTINGS_FILE, 'r') as file:
@@ -29,7 +27,6 @@ def load_settings():
             return data
     except FileNotFoundError:
         return {}
-
 def save_settings(data):
     with open(SETTINGS_FILE, 'w') as file:
         json.dump(data, file, indent=4)
@@ -104,6 +101,9 @@ async def set_channel(ctx):
     save_settings(channel_settings)
     await ctx.send(f'``TTS 채널이 {ctx.channel.name}으로 설정되었습니다.\n해당 채널에서 메세지를 입력 해주세요.``')
 
+# ------------------------- #
+#        메세지 감지 
+# ------------------------- #
 @bot.event
 async def on_message(message):
     if message.author.bot:
@@ -117,6 +117,9 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
+# ------------------------- #
+#            TTS
+# ------------------------- #
 async def read_tts(message):
     global tts_queue, tts_playing, current_tts_file_path, voice_clients
 
