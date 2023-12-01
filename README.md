@@ -1,6 +1,8 @@
 # Discord-TTS-BOT
 
 마이크를 사용할 수 없는 이용자들을 위한 간단한 디스코드 봇
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+<img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white">
 
 ##  Installation
 #### 다운해야 하는 것은 아래 링크와 같습니다.
