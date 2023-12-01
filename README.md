@@ -87,4 +87,5 @@ async def read_tts(message):
         print(f"오류: {e}")
     
     tts_playing = False
-    vc.stop()```
+    vc.stop()
+```
