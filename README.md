@@ -92,5 +92,3 @@ async def read_tts(message):
     tts_playing = False
     vc.stop()
 ```
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
