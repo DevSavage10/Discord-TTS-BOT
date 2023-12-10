@@ -1,22 +1,22 @@
 # Discord-TTS-BOT
 
-마이크를 사용할 수 없는 이용자들을 위한 간단한 디스코드 봇
+A simple discord bot for users who don't have access to a microphone
 
 # Stack
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white"> <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white"> <img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=Replit&logoColor=white">
 
 ##  Installation
-#### 다운해야 하는 것은 아래 링크와 같습니다.
+#### Download
 - [ffmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip)
 - [Python](https://www.python.org/downloads/release/python-3115/)
 
-**구동 전 다운로드** 해주세요, 만약 다운로드 하지 않으면 Discord BOT 구동에 **치명적인 오류**가 발생할 수 있습니다
+Please **download before running**, failure to do so may result in a **fatal error** in running the Discord BOT.
 
 ## How it works
 
-1. settings.json 안에 있는 server_id를 받아옵니다.
-2. 메세지를 server_id/tts.mp3로 변환합니다.
-3. 해당 tts.mp3를 읽습니다.
+1. Get the server_id from inside settings.json.
+2. Convert the message to server_id/tts.mp3.
+3. Read the corresponding tts.mp3.
 
 ## Document
 .채널설정
